@@ -33,7 +33,7 @@ public class ATM {
                 int balance = account.getBalance();
                 System.out.printf("帳戶餘額：%,d\n",balance);
                 break;    
-            case 9://離開1
+            case 9://離開
                 return;    
         }
         run(account);//遞迴
