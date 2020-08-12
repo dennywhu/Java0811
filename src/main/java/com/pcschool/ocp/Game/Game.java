@@ -3,10 +3,37 @@ package com.pcschool.ocp.game;
 import java.util.Scanner;
 
 public class Game {
+
     public static void main(String[] args) {
-        englishGameLoop();
+        menu();
     }
-    
+
+    public static void menu() {
+        while (true) {
+            System.out.println("Jaca Game");
+            System.out.println("---------");
+            System.out.println("1.猜數字");
+            System.out.println("2.猜字母");
+            System.out.println("9.Exit");
+            System.out.println("--------");
+            System.out.println("請選擇 ==>");
+            int choice = new Scanner(System.in).nextInt();
+            switch (choice) {
+                case 1:
+                    numberGameLoop();
+                    break;
+                case 2:
+                    englishGameLoop();
+                    break;
+                case 9:
+                    return;
+            }
+            System.out.println("請按下Enter繼續");
+            new Scanner(System.in).nextLine();
+        }
+
+    }
+
     public static void englishGameLoop() {
         English english = new English();
         while (true) {
@@ -24,7 +51,7 @@ public class Game {
             }
         }
     }
-    
+
     public static void numberGameLoop() {
         Number number = new Number();
         while (true) {
