@@ -8,7 +8,8 @@ public class MultiArray5 {
             {'x', 'o', ' '},
             {'x', ' ', 'x'}
         };
-        ttt [2][1] ='o';
+        int x = 7;
+        ttt [x/3][x%3] ='o';
     System.out.println("O 勝利");
         //印出最後結局
         for (int i=0;i<ttt.length;i++){
