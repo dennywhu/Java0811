@@ -1,16 +1,17 @@
-package com.pcschool.ocp.d03.fastfood;
+package com.pcschool.ocp.d03.bookstore;
 
-public class Breast {
-    private int price = 35;
-    private static int amount = 100;
+public class Pen {
+    private int price = 10;
+    private static int amount = 10;
 
-    public Breast() {
+    public Pen() {
         amount--;
     }
     
     public int getPrice() {
         return price;
     }
+
     public static int getAmount() {
         return amount;
     }
