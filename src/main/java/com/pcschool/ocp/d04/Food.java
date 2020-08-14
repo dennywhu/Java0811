@@ -8,7 +8,7 @@ public class Food {
     public static String name;
     private int amount=100;
     private int price;
-    
+    //類別成員共同初始區段
     static{
         int n = new Random().nextInt(10);
         if(n%2==0)
