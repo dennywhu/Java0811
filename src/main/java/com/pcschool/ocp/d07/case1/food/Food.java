@@ -29,7 +29,11 @@ public class Food {
         setMaterials(new_materials);
         return this;
     }
-
+    /*來源,起始位置,目的陣列,目的陣列起始位置,資料長度
+    ARRAYCOPY(MATERIALS,0,NEW_MATERIAL,0,MATERIALS.LENGH)   
+    */
+    
+    
     public String getName() {
         return name;
     }
