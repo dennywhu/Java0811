@@ -20,7 +20,7 @@ public class ArmyMain {
         //weapons統一發射JAVA8
         Arrays.stream(weapons).forEach(w -> w.shoot());
         //car統一發射
-        System.out.println("----------------------");
+        System.out.println("----------我是分隔線------------");
         Arrays.stream(cars)
                 .filter(c -> c instanceof Weapon)
                 .map(c -> (Weapon)c).forEach(c -> c.shoot());
