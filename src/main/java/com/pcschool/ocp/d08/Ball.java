@@ -1,5 +1,7 @@
 package com.pcschool.ocp.d08;
 
+import java.util.Objects;
+
 public class Ball {
     private String color;
     private int price;
@@ -9,6 +11,16 @@ public class Ball {
         this.price = price;
     }
 
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 47 * hash + Objects.hashCode(this.color);
+        hash = 47 * hash + this.price;
+        return hash;
+    }
+    
+    
+    
     @Override
     public boolean equals(Object obj) {
         if(this == obj) {
