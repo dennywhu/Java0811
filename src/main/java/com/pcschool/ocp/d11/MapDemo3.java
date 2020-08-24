@@ -21,6 +21,6 @@ public class MapDemo3 {
         // papaya=1,orange=1,banana=2 apple=4
         Map<String,Long> group1 = items.stream()
                 .collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
-        System.out.println(items);
+        System.out.println(group1);
     }
 }
