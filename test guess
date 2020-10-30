@@ -1,0 +1,76 @@
+package guessnumber;
+import java.util.Random;
+import java.util.Scanner;
+public class number
+{
+ public static void main(String[] args)
+ {
+  int[] answer = new int[4];
+  answer[0]=(int)(Math.random()*9)+1;
+  answer[1] = (int)(Math.random()*9)+1;
+  answer[2] = (int)(Math.random()*9)+1;
+  answer[3] = (int)(Math.random()*9)+1;
+  while (answer[1] == answer[0])
+  {
+   answer[1] = (int)(Math.random()*9)+1;
+  }
+  while ((answer[2] == answer[1])||(answer[2] == answer[0]))
+  {
+   answer[2] = (int)(Math.random()*9)+1;
+  }
+  while ((answer[3] == answer[2])||(answer[3] == answer[1])||(answer[3] == answer[0]))
+  {
+   answer[3] = (int)(Math.random()*9)+1;
+  }//產生一組隨機數 四位數不重複
+  /*for(int i=0;i<answer.length;i++)
+  {
+   System.out.print(answer[i]);
+  }*/
+  
+  while(true) 
+  {
+   System.out.println("請輸入四位數字");
+   int[] user= {0,0,0,0};
+   Scanner sc=new Scanner(System.in);
+   String number=sc.next();
+    for (int i = 0; i < 4; i++)
+    {
+              user[i] = Integer.parseInt(number.charAt(i) + " ");
+              //字串轉換成整數再將數字一一丟入一個陣列
+    }
+   int A=0,B=0;
+   for(int i=0;i<4;i++)
+   {
+    if(user[i]==answer[i])
+    {
+     A++;
+    }
+   }//檢查A
+   for(int i=0;i<4;i++)
+   { 
+    for(int j=0;j<4;j++)
+    {
+     if(user[i]==answer[j])
+     {
+      B++;
+      break;
+     }
+    }
+   
+    
+   }//檢查B
+   if(A==4)
+   {
+    System.out.println("correct");
+    break;
+   }
+   else
+   {
+    int b=B-A;
+    System.out.println(A+"A"+b+"B");
+   }
+  }
+   
+ }
+ 
+}
